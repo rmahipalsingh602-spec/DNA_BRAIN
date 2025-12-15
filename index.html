@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>DNA Memory Brain 🧠</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <h1>🧠 DNA Memory Brain</h1>
+  <p class="tagline">Bolta bhi hai, yaad bhi rakhta hai</p>
+
+  <div id="chatBox"></div>
+
+  <div class="inputArea">
+    <input id="userInput" placeholder="Likho ya 🎤 dabao..." />
+    <button onclick="sendMessage()">Send</button>
+    <button onclick="startVoice()">🎤</button>
+  </div>
+</div>
+
+<script src="brain.js"></script>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+  }
+</script>
+</body>
+</html>
